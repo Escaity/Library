@@ -1,8 +1,8 @@
 ## 競プロ初心者のプログラム保管庫
 * ### 使用言語:  
   * Python3
-  * Go(予定)  
-
+  * Go(未定)  
+  * Nim(勉強中)
 
 * ### Webサイト:
   * [AtCoder](https://atcoder.jp/home)  
