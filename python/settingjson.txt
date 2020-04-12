@@ -1,0 +1,21 @@
+{
+    "git.autofetch": true,
+    "python.pythonPath": "/usr/bin/python3",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "Hackpot",
+    "files.autoSave": "afterDelay",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Args": [
+        "--ignore=E203, W503, W504",
+        "--max-line-length=88"
+    ],
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "window.zoomLevel": 0
+}
