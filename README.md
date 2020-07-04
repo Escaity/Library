@@ -2,7 +2,7 @@
 * ### 使用言語:  
   * Python3
   * Go(未定)  
-  * Nim(勉強中)
+  * Java/Kotlin(アプリ開発が気になる）
 
 * ### Webサイト:
   * [AtCoder](https://atcoder.jp/home)  
