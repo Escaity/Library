@@ -1,14 +1,14 @@
-n = list(input())
-ni = list(map(int,n))
-nsum = sum(ni)
-ans = 0
-op = []
-for i in ni:
-    ans += i
-    
-    if nsum > 7 and ans > 7:
-        ans -= i
-        op += "-"
-    else:
-        op += "+"
-print("%d%s%d%s%d%s%d=7" % (ni[0],op[0],ni[1],op[1],ni[2],op[2],ni[3]))
+n = input()
+# bit前探索(オペランドの組み合わせの数だけループ)
+for x in range(1 << 3):
+    # オペランド初期化
+    opr = ["-"] * 3
+    # オペランドのパターン作成
+    for i in range(3):
+        if x & (1 << i):
+            opr[i] = "+"
+    # オペランドパターンと番号を組み合わせた式(shiki)
+    shiki = "%s%s%s%s%s%s%s" % (n[0], opr[0], n[1], opr[1], n[2], opr[2], n[3])
+    if eval(shiki) == 7:
+        print("%s=7" % shiki)
+        break
