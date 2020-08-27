@@ -1,11 +1,20 @@
-def capital_indexes(s):
-    cap = []
-    for i, v in enumerate(s):
-        if v.isupper():
-            cap.append(str(i))
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
 
-    return list(map(int, cap))
+num = 1
+li = [1]
+flag = [True] * n
+flag[0] = False
 
+for i in range(k):
+    num = a[num - 1]
+    if flag[num - 1]:
+        li.append(num)
+        flag[num - 1] = False
+    else:
+        break
 
-word = input()
-print(capital_indexes(word))
+d = li.index(num)
+ans = (k - d) % (len(li) - d) + d
+
+print(li[ans])

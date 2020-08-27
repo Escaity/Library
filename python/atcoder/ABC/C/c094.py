@@ -1,17 +1,19 @@
+"""
+組み合わせ方が最大になるnCrを求める。
+数列内の中間の数の求め方、n==2の時に注意
+"""
+n = int(input())
 a = list(map(int, input().split()))
-s, m, b = sorted(a)
-cnt = 0
-m_s = m - s
-# 最大値ー中間でカウント
-cnt += b - m
-# 中間と最小値の差を埋める（x2の操作を（中間-最小値)//2回カウント
-cnt += m_s // 2
-
-# 中間-最小値が1であれば、最小、最大値が増える操作と最小、中間が増える操作を行うので+2カウント
-if m_s % 2 == 1:
-    cnt += 2
-print(cnt)
-
-"""
-31 41 5
-"""
+maxa = max(a)
+mini = [[] for _ in range(n)]
+for i, v in enumerate(a):
+    r = maxa - v
+    # 数列vがどれだけ中間にあるか(v - r)を格納する
+    mini[i] = [v, abs(v - r)]
+# maxaの中間に近い順にソート
+mini.sort(key=lambda x: x[1])
+if n == 2:
+    # 数列aの要素数が２つなら答えは(最大、最小)
+    print(maxa, min(a))
+else:
+    print(maxa, mini[0][0])
