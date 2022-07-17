@@ -1,101 +1,138 @@
 {
-	"main": {
-		"prefix": "main",
-		"body": [
-			"def main():",
-			"    $0\n",
-			"if __name__ == '__main__':",
-			"    main()",
-		],
-		"description": "main func"
-	},
-	"gcd": {
-		"prefix": "gcd",
-		"body": [
-			"def gcd(a, b):",
-			"    return b if a % b == 0 else gcd(b, a % b)\n"
-		],
-		"description": "gcd"
-	},
-	"isPrime": {
-		"prefix": "isprime",
-		"body": [
-			"def isPrime(x):",
-			"    if x == 2: return True",
-			"    if x < 2 or x % 2 == 0: return False",
-			"    for i in range(3, int(x**0.5) + 1, 2):",
-			"        if x % i == 0: return False",
-			"    return True\n",
-		],
-		"description": "sosu hantei"
-	},
-	"dsum": {
-		"prefix": "dsum",
-		"body": [
-			"def dsum(n):",
-			"    wa = 0",
-			"    while n > 0:",
-			"        wa += n % 10",
-			"        n //= 10",
-			"    return wa\n",
-		],
-		"description": "digit sum"
-	},
-	"N_equal": {
-		"prefix": "neq",
-		"body": [
-			"n = int(input())\n",
-		],
-		"description": "N=int(input(.."
-	},
-	"A_equal": {
-		"prefix": "aeq",
-		"body": [
-			"A = list(map(int, input().split()))\n",
-		],
-		"description": "A=list(map(.."
-	},
-	"enum_divisor": {
-		"prefix": "enumdiv",
-		"body": [
-			"def enum_div(n):",
-			"    dv = []",
-			"    for i in range(1, int(n**0.5)+1):",
-			"        if n%i == 0:",
-			"            dv.append(i)",
-			"            if i != n//i:",
-			"                dv.append(n//i)",
-			"    #dv.sort()",
-			"    return dv\n",
-		],
-		"description": "return yakusuu"
-	},
-	"parts": {
-		"prefix": "parts",
-		"body": [
-			"import sys\n",
-			"# input=sys.stdin.readline",
-			"# sys.setrecursionlimit(2147483647)",
-			"INF = float(\"inf\")",
-			"MOD = 10**9 + 7\n",
-		],
-		"description": "basic parts"
-	},
-	"prime_factrization": {
-		"prefix": "primefact",
-		"body": [
-			"def primeFact(n):",
-			"    i = 2",
-			"    pl = []",
-			"    while i * i <= n:",
-			"        while n % i == 0:",
-			"            n /= i",
-			"            pl.append(i)",
-			"        i += 1",
-			"    if n > 1:",
-			"        pl.append(int(n))",
-			"    return pl\n",
-		],
-		"description": "soinsubunkai"
-	},
+  "main": {
+    "prefix": "main",
+    "body": [
+      "def main():",
+      "    $0\n",
+      "if __name__ == '__main__':",
+      "    main()"
+    ],
+    "description": "main func"
+  },
+  "gcd": {
+    "prefix": "gcd",
+    "body": [
+      "def gcd(a, b):",
+      "    return b if a % b == 0 else gcd(b, a % b)\n"
+    ],
+    "description": "gcd"
+  },
+  "isPrime": {
+    "prefix": "isprime",
+    "body": [
+      "def is_prime(x):",
+      "    if x == 2: return True",
+      "    if x < 2 or x % 2 == 0: return False",
+      "    for i in range(3, int(x**0.5) + 1, 2):",
+      "        if x % i == 0: return False",
+      "    return True\n"
+    ],
+    "description": "sosu hantei"
+  },
+  "dsum": {
+    "prefix": "digitSum",
+    "body": [
+      "def digit_sum(n):",
+      "    wa = 0",
+      "    while n > 0:",
+      "        wa += n % 10",
+      "        n //= 10",
+      "    return wa\n"
+    ],
+    "description": "digit sum"
+  },
+  "N_equal": {
+    "prefix": "nii",
+    "body": ["n = int(input())\n"],
+    "description": "N=int(input(.."
+  },
+  "A_equal": {
+    "prefix": "ali",
+    "body": ["A = list(map(int, input().split()))\n"],
+    "description": "A=list(map(.."
+  },
+  "enum_divisor": {
+    "prefix": "enumdiv",
+    "body": [
+      "def enum_div(n):",
+      "    dv = []",
+      "    for i in range(1, int(n**0.5)+1):",
+      "        if n%i == 0:",
+      "            dv.append(i)",
+      "            if i != n//i:",
+      "                dv.append(n//i)",
+      "    #dv.sort()",
+      "    return dv\n"
+    ],
+    "description": "return yakusuu"
+  },
+  "parts": {
+    "prefix": "parts",
+    "body": [
+      "import sys\n",
+      "# input=sys.stdin.readline",
+      "# sys.setrecursionlimit(2147483647)",
+      "INF = float(\"inf\")",
+      "MOD = 10**9 + 7\n"
+    ],
+    "description": "basic parts"
+  },
+  "prime_factrization": {
+    "prefix": "primefact",
+    "body": [
+      "def primeFact(n):",
+      "    i = 2",
+      "    pl = []",
+      "    while i * i <= n:",
+      "        while n % i == 0:",
+      "            n /= i",
+      "            pl.append(i)",
+      "        i += 1",
+      "    if n > 1:",
+      "        pl.append(int(n))",
+      "    return pl\n"
+    ],
+    "description": "soinsubunkai"
+  },
+  "string_int_float_is_integer": {
+    "prefix": "is_integer",
+    "body": [
+      "def is_integer(n):",
+      "    try:",
+      "        float(n)",
+      "    except ValueError:",
+      "        return False",
+      "    else:",
+      "        return float(n).is_integer()\n"
+    ],
+    "description": "number is integer"
+  },
+  "is_palindrome": {
+    "prefix": "is_kaibun",
+    "body": [
+      "def ispalindrome(val):",
+      "    return 1 if str(val) == str(val)[::-1] else 0\n"
+    ],
+    "description": "input is palindrome"
+  },
+  "base10toN": {
+    "prefix": "base10to",
+    "body": [
+      "import sys",
+      "sys.setrecursionlimit(2147483647)",
+      "def base10to(x, n):",
+      "    if int(x / n):",
+      "        return base10to(int(x / n), n) + str(x % n)",
+      "    return str(x % n)\n"
+    ],
+    "description": ""
+  }
+  // "template": {
+  //   "prefix": "",
+  //   "body": [
+  //     "",
+  //     ""
+  //   ],
+  //   "description": ""
+  // },
 }
